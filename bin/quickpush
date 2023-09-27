@@ -1,0 +1,10 @@
+#!/bin/bash
+set -Eeuo pipefail
+set -x
+
+git status
+git add --all
+git status
+read -p "create a comment " comment
+git commit -m "$comment"
+git push origin HEAD
